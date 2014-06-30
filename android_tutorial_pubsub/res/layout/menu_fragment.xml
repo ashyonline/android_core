@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/take_off"
+        android:id="@+id/take_off"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="52dp"
+        android:onClick="takeoffClicked"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/land"
+        android:id="@+id/land"
+        android:layout_alignTop="@+id/take_off"
+        android:layout_toRightOf="@+id/take_off"
+        android:onClick="landClicked"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+        android:id="@+id/reset"
+        android:layout_alignTop="@+id/land"
+        android:layout_toRightOf="@+id/land"
+        android:onClick="resetClicked"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/up"
+        android:layout_below="@+id/take_off"
+        android:layout_alignRight="@+id/reset"
+        android:layout_marginTop="104dp"
+        android:src="@drawable/up_icon"
+        android:onClick="upClicked"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/down"
+        android:src="@drawable/down_icon"
+        android:layout_below="@+id/left"
+        android:layout_toRightOf="@+id/left"
+        android:onClick="downClicked"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/left"
+        android:src="@drawable/left_icon"
+        android:layout_below="@+id/up"
+        android:layout_toLeftOf="@+id/up"
+        android:onClick="leftClicked"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/right"
+        android:src="@drawable/right_icon"
+        android:layout_alignTop="@+id/left"
+        android:layout_toRightOf="@+id/down"
+        android:onClick="rightClicked"/>
+</RelativeLayout>

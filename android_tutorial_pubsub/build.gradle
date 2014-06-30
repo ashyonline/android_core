@@ -15,20 +15,23 @@
  */
 
 dependencies {
-  compile 'org.ros.rosjava_core:rosjava_tutorial_pubsub:[0.2,0.3)'
-  compile project(':android_10')
+    compile project(':android_10')
+    compile 'org.ros.rosjava_core:rosjava_tutorial_pubsub:[0.2,0.3)'
+    compile 'com.android.support:support-v4:19.+'
+    compile files('libs/snakeyaml-android-1.8-SNAPSHOT.jar')
+    compile fileTree(dir: 'libs', include: '*.jar')
 }
 
 apply plugin: 'android'
 
 android {
-  compileSdkVersion 10
+    compileSdkVersion 19
 
-  defaultConfig {
-    minSdkVersion 10
-    packageName "org.ros.android.android_tutorial_pubsub"
-    targetSdkVersion 10
-    versionCode 1
-    versionName "1.0"
-  }
+    defaultConfig {
+        minSdkVersion 19
+        packageName "org.ros.android.android_tutorial_pubsub"
+        targetSdkVersion 19
+        versionCode 1
+        versionName "1.0"
+    }
 }
